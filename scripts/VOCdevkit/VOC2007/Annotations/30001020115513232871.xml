@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><annotation>
+		<folder>VOC</folder>
+		<filename>30001020115513232871</filename>
+		<object_num>1</object_num>
+		<size>
+			<width>500</width>
+			<height>350</height>
+			<depth>3</depth>
+		</size>
+		<object>
+			<name>3</name>
+			<difficult>0</difficult>
+			<pose>Frontal</pose>
+			<truncated>0</truncated>
+			<bndbox>
+				<xmin>139</xmin>
+				<ymin>76</ymin>
+				<xmax>257</xmax>
+				<ymax>193</ymax>
+			</bndbox>
+		</object>
+	</annotation>
