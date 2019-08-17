@@ -1176,6 +1176,7 @@ void *load_thread(void *ptr)
     return 0;
 }
 
+//加载数据到args.d指针所指缓冲区
 pthread_t load_data_in_thread(load_args args)
 {
     pthread_t thread;
@@ -1185,6 +1186,8 @@ pthread_t load_data_in_thread(load_args args)
     return thread;
 }
 
+
+//根据args的tpye属性决定调用哪个方法执行load_data
 void *load_threads(void *ptr)
 {
     //srand(time(0));

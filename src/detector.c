@@ -23,7 +23,7 @@ typedef __compar_fn_t comparison_fn_t;
 
 int check_mistakes = 0;
 
-static int coco_ids[] = { 1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,24,25,27,28,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,67,70,72,73,74,75,76,77,78,79,80,81,82,84,85,86,87,88,89,90 };
+static int coco_ids[] = { 1,2,3,4,5,6,7,8,9,10,11};
 
 
 void train_detector(char* datacfg, char* cfgfile, char* weightfile, int* gpus, int ngpus, int clear, int dont_show, int calc_map, int mjpeg_port, int show_imgs)
@@ -1270,8 +1270,8 @@ void calc_anchors(char* datacfg, int num_of_clusters, int width, int height, int
 
     getchar();
 }
-//单个图片处理
 
+//单个图片处理
 void test_detector(char* datacfg, char* cfgfile, char* weightfile, char* filename, float thresh,
     float hier_thresh, int dont_show, int ext_output, int save_labels, char* outfile, int letter_box)
 {
@@ -1553,16 +1553,14 @@ void run_detector(int argc, char** argv)
     char* out_filename = find_char_arg(argc, argv, "-out_filename", 0);
     char* outfile = find_char_arg(argc, argv, "-out", 0);
     char* prefix = find_char_arg(argc, argv, "-prefix", 0);
-    float thresh = find_float_arg(argc, argv, "-thresh", .25);    // 0.24
-    float iou_thresh = find_float_arg(argc, argv, "-iou_thresh", .5);    // 0.5 for mAP
+    float thresh = find_float_arg(argc, argv, "-thresh", .25);    
+    float iou_thresh = find_float_arg(argc, argv, "-iou_thresh", .5);  
     float hier_thresh = find_float_arg(argc, argv, "-hier", .5);
     int cam_index = find_int_arg(argc, argv, "-c", 0);
     int frame_skip = find_int_arg(argc, argv, "-s", 0);
     int num_of_clusters = find_int_arg(argc, argv, "-num_of_clusters", 5);
     int width = find_int_arg(argc, argv, "-width", -1);
     int height = find_int_arg(argc, argv, "-height", -1);
-    // extended output in test mode (output of rect bound coords)
-    // and for recall mode (extended output table-like format with results for best_class fit)
     int ext_output = find_arg(argc, argv, "-ext_output");
     int save_labels = find_arg(argc, argv, "-save_labels");
     if (argc < 4) {
