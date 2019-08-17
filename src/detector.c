@@ -1519,7 +1519,7 @@ void test_detector(char* datacfg, char* cfgfile, char* weightfile, char* filenam
         }
     }
     printf("All Done!\n");
-    
+
     exit(0);
     free_ptrs(names, net.layers[net.n - 1].classes);
     free_list_contents_kvp(options);
@@ -1536,7 +1536,7 @@ void test_detector(char* datacfg, char* cfgfile, char* weightfile, char* filenam
     free(alphabet);
     free_network(net);
     printf("All Done!\n");
-   
+
 }
 */
 void run_detector(int argc, char** argv)

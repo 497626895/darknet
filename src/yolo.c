@@ -6,7 +6,7 @@
 #include "box.h"
 #include "demo.h"
 
-char *voc_names[] = {"aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"};
+char *voc_names[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"};
 
 void train_yolo(char *cfgfile, char *weightfile)
 {

@@ -1,10 +1,10 @@
+#include "darknet.h"
 #include <cuda_runtime.h>
 #include <curand.h>
 #include <cublas_v2.h>
 
 #include "activations.h"
 #include "dark_cuda.h"
-#include <darknet.h>
 
 
 __device__ float lhtan_activate_kernel(float x)
